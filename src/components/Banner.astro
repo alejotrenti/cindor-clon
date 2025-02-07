@@ -1,0 +1,31 @@
+<div id="bottom-banner" tabindex="-1" class="fixed bottom-0 start-0 z-50 flex justify-between w-full p-4 bg-red-600/90">
+    <div class="flex items-center mx-auto">
+        <p class="flex items-center text-lg font-semibold text-white">
+            <span class="inline-flex p-1 me-3 bg-white rounded-full w-8 h-8 items-center justify-center">
+                <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Zm0 2C7.589 4 4 7.589 4 12s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8Zm-.75 4.5h1.5v6h-1.5v-6Zm0 7.5h1.5v1.5h-1.5V16Z"/>
+                </svg>
+                <span class="sr-only">Alerta</span>
+            </span>
+            Esta página fue hecha con fines personales y es un clon de la página oficial: 
+            <a href="https://www.cindor.com.ar/" class="text-white underline hover:text-yellow-300 ms-2" target="_blank" rel="noopener noreferrer">
+                https://www.cindor.com.ar/
+            </a>
+        </p>
+    </div>
+    <div class="flex items-center">
+        <button id="close-banner" type="button" class="shrink-0 inline-flex justify-center w-8 h-8 items-center text-white hover:bg-red-700 hover:text-gray-200 rounded-lg text-lg p-1">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M6 18L18 6"/>
+            </svg>
+            <span class="sr-only">Cerrar banner</span>
+        </button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("close-banner").addEventListener("click", function () {
+        const banner = document.getElementById("bottom-banner");
+        banner.style.display = "none";
+    });
+</script>

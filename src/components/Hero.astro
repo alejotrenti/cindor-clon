@@ -1,0 +1,133 @@
+---
+// Importación de componentes
+import Cruz from '../components/symbols/Cruz.astro';
+import AskSym from '../components/symbols/AskSym.astro';
+import Heart from '../components/symbols/Heart.astro';
+import Plus from '../components/symbols/Plus.astro';
+import Star from '../components/symbols/Star.astro';
+import Clown from './symbols/Clown.astro';
+---
+<section class="relative min-h-screen w-full">
+  <!-- Video de fondo -->
+  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
+    <source src="/video.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+
+  <!-- Texto central -->
+  <div class="absolute inset-0 bg-red-800 bg-opacity-30 flex flex-col items-center justify-center text-center px-8 z-20">
+    <div class="inset-0 pointer-events-none  max-w-3xl -my-40 pt-20">
+      <img src="FINALHERO.png" alt="main hero" >
+    </div>
+    
+    
+    <h1 class="text-9xl font-semibold text-white leading-tight font-bangers drop-shadow-lg">
+      <span class="animate-bounce tracking-wide"> AGITEMOS </span>
+      <span class="font-staat text-7xl uppercase"> para que las cosas </span>
+      <span class="font-staat text-9xl uppercase bg-gradient-to-t from-red-800 to-white bg-clip-text text-transparent tracking-wide">PASEN</span>
+    </h1>
+    <p class="mt-6 text-4xl text-gray-200">
+      <span class="text-red-500">Cindor</span>, tu chocolatada preferida
+    </p>
+      <button
+      class="mt-20 bg-red-800 text-white font-semibold p-4 rounded-full hover:bg-red-400 transition flex items-center justify-center shadow-lg"
+      onclick="document.getElementById('product').scrollIntoView({ behavior: 'smooth' });"
+      aria-label="Scroll to product"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 16l-6-6h12z" />
+      </svg>
+    </button>
+
+  
+  </div>
+
+  <!-- Símbolos -->
+  <div class="absolute inset-0 pointer-events-none z-10">
+    <span class="symbol"><Cruz /></span>
+    <span class="symbol"><Cruz /></span>
+    <span class="symbol"><AskSym /></span>
+    <span class="symbol"><AskSym /></span>
+    <span class="symbol"><Plus /></span>
+    <span class="symbol"><Plus /></span>
+    <span class="symbol"><Star /></span>
+    <span class="symbol"><Star /></span>
+    <span class="symbol"><Heart /></span>
+    <span class="symbol"><Heart /></span>
+    <span class="symbol"><Clown /></span>
+    <span class="symbol"><Clown /></span>
+  </div>
+
+<!-- Caja -->
+<div class="absolute inset-0 pointer-events-none z-20 w-full h-full caja">
+  <img
+    src="/caja.jpg"
+    alt="caja"
+    class="absolute -bottom-96 right-10 transform -rotate-12 scale-90 "
+  />
+</div>
+
+
+  <!-- Estilos -->
+  <style>
+    .caja{
+      animation: float2 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes float2 {
+      from {
+        transform: translateY(10px);
+      }
+      to {
+        transform: translateY(100px) ;
+      }
+    }
+
+
+    .animate-bounce {
+			  display: inline-block;
+			  animation: bounce 1s infinite;
+		}
+		  
+    @keyframes bounce {
+      0%, 100% {
+      transform: translateY(0);
+      }
+      50% {
+      transform: translateY(-10px);
+      }
+    }
+
+    .symbol {
+      position: absolute;
+      color: white;
+      fill: white !important; /* Asegura blanco incluso si hay estilos heredados */
+      font-size: 3rem;
+      opacity: 0.8;
+      animation: float 2s infinite alternate ease-in-out;
+    }
+
+    /* Animaciones y distribución */
+    @keyframes float {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(10px) rotate(2deg);
+      }
+    }
+
+    .symbol:nth-child(1) { top: 10%; left: 15%; transform: rotate(-15deg); }
+    .symbol:nth-child(2) { top: 10%; left: 90%; }
+    .symbol:nth-child(3) { top: 50%; left: 15%; transform: rotate(30deg); }
+    .symbol:nth-child(4) { top: 70%; left: 92%; }
+    .symbol:nth-child(5) { top: 80%; left: 30%; }
+    .symbol:nth-child(6) { top: 18%; left: 69%; }
+    .symbol:nth-child(7) { top: 25%; left: 3%; }
+    .symbol:nth-child(8) { top: 75%; left: 6%; }
+    .symbol:nth-child(9) { top: 40%; left: 85%; }
+    .symbol:nth-child(10) { top: 80%; left: 60%; }
+    .symbol:nth-child(11) { top: 60%; left: 70%; }
+    .symbol:nth-child(12) { top: 24%; left: 25%; }
+  </style>
+</section>

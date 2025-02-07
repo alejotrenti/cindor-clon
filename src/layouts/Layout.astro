@@ -1,0 +1,44 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '@fontsource/bangers';
+import '@fontsource/staatliches';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Delicious Chocolate Milk" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/caja.jpg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	
+	:root {
+		--red-primary: #FF4B4B;
+		--red-dark: #D63030;
+		--chocolate: #3A1D1D;
+	}
+	html {
+		font-family: 'Poppins', sans-serif;
+		background: #FFFFFF;
+		scroll-behavior: smooth;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	  scroll-behavior: smooth;
+
+</style>
