@@ -3,9 +3,9 @@ import Caja3D from './object/Caja3D'
 import Star from './symbols/Star.astro'
 ---
 
-<section id="product" class="relative py-14 pt-44 w-full bg-red-600 text-center">
-  <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#451a03" d="M0,256L1440,160L1440,320L0,320Z"></path>
+<section id="product" class="relative pt-44  w-full bg-red-600 text-center">
+  <svg class="absolute bottom-0 left-0 w-full sm:-mb-1 -mb-2" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#451a03" d="M0,256L1440,160L1440,320L0,320Z"></path>
   </svg>
     <div class="absolute inset-0 flex flex-row w-full h-full overflow-hidden pointer-events-none">
         <img 
@@ -43,37 +43,37 @@ import Star from './symbols/Star.astro'
         <div class="flex flex-col md:flex-row pt-10 gap-8 mt-12 max-w-7xl mx-auto justify-center">
             
             <!-- Columna izquierda: Caja 3D -->
-            <div class="flex-1 bg-white p-8 rounded-xl shadow-xl shadow-black/80 flex justify-center items-center">
+            <div class="flex-1 bg-white rounded-xl shadow-xl shadow-black/80 flex justify-center items-center">
                 <!-- class="w-full h-64 md:h-[400px]"  -->
                 <Caja3D client:load />
             </div>
             
-            <div class="flex-1 shadow-xl shadow-black/80 bg-amber-950 p-10 px-20 rounded-xl">
-                <h3 class="text-6xl font-extrabold text-white text-center mb-20 tracking-widest transform hover:scale-105 transition-all duration-300">
+            <div class="flex-1 shadow-xl shadow-black/80 bg-amber-950 p-7 lg:p-10 lg:px-20 rounded-xl">
+                <h3 class="lg:text-6xl text-3xl font-extrabold text-white text-center p-4 lg:mb-20 tracking-widest transform hover:scale-105 transition-all duration-300">
                   NUESTRO <span class="text-red-800">SECRETO</span> 
                 </h3>
-                <ul class="text-2xl text-white space-y-6">
+                <ul class="lg:text-2xl text-xl text-white space-y-6">
                   <li class="flex items-center">
                     <span class="bg-brown-600 p-2 rounded-full text-white mr-6">
-                      <Star class="fill-white size-20" />
+                      <Star class="fill-white lg:size-20 size-10" />
                     </span>
                     <span>Con mucha facha</span>
                   </li>
-                  <li class="flex items-center">
+                  <li class="flex items-center text-left">
                     <span class="bg-brown-600 p-2 rounded-full text-white mr-6">
-                      <Star class="fill-white size-20" />
+                      <Star class="fill-white lg:size-20 size-10" />
                     </span>
                     <span>Deja a todos sin palabras</span>
                   </li>
                   <li class="flex items-center">
                     <span class="bg-brown-600 p-2 rounded-full text-white mr-6">
-                      <Star class="fill-white size-20" />
+                      <Star class="fill-white lg:size-20 size-10" />
                     </span>
                     <span>Puro y sin aditivos</span>
                   </li>
                   <li class="flex items-center">
                     <span class="bg-brown-600 p-2 rounded-full text-white mr-6">
-                      <Star class="fill-white size-20" />
+                      <Star class="fill-white lg:size-20 size-10" />
                     </span>
                     <span>Sabor que enamora</span>
                   </li>

@@ -16,20 +16,19 @@ import Clown from './symbols/Clown.astro';
 
   <!-- Texto central -->
   <div class="absolute inset-0 bg-red-800 bg-opacity-30 flex flex-col items-center justify-center text-center px-8 z-20">
-    <div class="inset-0 pointer-events-none  max-w-3xl -my-40 pt-20">
-      <img src="FINALHERO.png" alt="main hero" >
+    <div class="inset-0 pointer-events-none max-w-3xl lg:-my-40 lg:pt-36">
+      <img src="FINALHERO.png" alt="main hero">
     </div>
     
-    
-    <h1 class="text-9xl font-semibold text-white leading-tight font-bangers drop-shadow-lg">
-      <span class="animate-bounce tracking-wide"> AGITEMOS </span>
-      <span class="font-staat text-7xl uppercase"> para que las cosas </span>
-      <span class="font-staat text-9xl uppercase bg-gradient-to-t from-red-800 to-white bg-clip-text text-transparent tracking-wide">PASEN</span>
+    <h1 class=" sm:text-4xl textxl font-semibold text-white leading-tight font-bangers drop-shadow-lg">
+      <span class="lg:animate-bounce tracking-wide lg:text-9xl text-7xl"> AGITEMOS </span>
+      <span class="font-staat lg:text-7xl text-4xl uppercase"> para que las cosas </span>
+      <span class="font-staat lg:text-9xl text-7xl uppercase bg-gradient-to-t from-red-800 to-white bg-clip-text text-transparent tracking-wide">PASEN</span>
     </h1>
-    <p class="mt-6 text-4xl text-gray-200">
+    <p class="mt-6 lg:text-4xl text-2xl text-gray-200">
       <span class="text-red-500">Cindor</span>, tu chocolatada preferida
     </p>
-      <button
+    <button
       class="mt-20 bg-red-800 text-white font-semibold p-4 rounded-full hover:bg-red-400 transition flex items-center justify-center shadow-lg"
       onclick="document.getElementById('product').scrollIntoView({ behavior: 'smooth' });"
       aria-label="Scroll to product"
@@ -38,39 +37,36 @@ import Clown from './symbols/Clown.astro';
         <path d="M12 16l-6-6h12z" />
       </svg>
     </button>
-
-  
   </div>
 
   <!-- Símbolos -->
-  <div class="absolute inset-0 pointer-events-none z-10">
-    <span class="symbol"><Cruz /></span>
-    <span class="symbol"><Cruz /></span>
-    <span class="symbol"><AskSym /></span>
-    <span class="symbol"><AskSym /></span>
-    <span class="symbol"><Plus /></span>
-    <span class="symbol"><Plus /></span>
-    <span class="symbol"><Star /></span>
-    <span class="symbol"><Star /></span>
-    <span class="symbol"><Heart /></span>
-    <span class="symbol"><Heart /></span>
-    <span class="symbol"><Clown /></span>
-    <span class="symbol"><Clown /></span>
+  <div class="absolute w-full inset-0 pointer-events-none z-10 hidden md:block overflow-hidden">
+    <span class="symbol size-52"><Cruz /></span>
+    <span class="symbol size-52"><Cruz /></span>
+    <span class="symbol size-52"><AskSym /></span>
+    <span class="symbol size-52"><AskSym /></span>
+    <span class="symbol size-52"><Plus /></span>
+    <span class="symbol size-52"><Plus /></span>
+    <span class="symbol size-52"><Star /></span>
+    <span class="symbol size-52"><Star /></span>
+    <span class="symbol size-52"><Heart /></span>
+    <span class="symbol size-52"><Heart /></span>
+    <span class="symbol size-52"><Clown /></span>
+    <span class="symbol size-52"><Clown /></span>
   </div>
 
-<!-- Caja -->
-<div class="absolute inset-0 pointer-events-none z-20 w-full h-full caja">
-  <img
-    src="/caja.jpg"
-    alt="caja"
-    class="absolute -bottom-96 right-10 transform -rotate-12 scale-90 "
-  />
-</div>
-
+  <!-- Caja -->
+  <div class="absolute hidden lg:flex inset-0 pointer-events-none z-20 w-full h-full caja">
+    <img
+      src="/caja.jpg"
+      alt="caja"
+      class="absolute lg:-bottom-96 lg:right-10 transform -rotate-12 scale-90"
+    />
+  </div>
 
   <!-- Estilos -->
   <style>
-    .caja{
+    .caja {
       animation: float2 2s infinite alternate ease-in-out;
     }
 
@@ -79,22 +75,21 @@ import Clown from './symbols/Clown.astro';
         transform: translateY(10px);
       }
       to {
-        transform: translateY(100px) ;
+        transform: translateY(100px);
       }
     }
 
-
     .animate-bounce {
-			  display: inline-block;
-			  animation: bounce 1s infinite;
-		}
-		  
+      display: inline-block;
+      animation: bounce 1s infinite;
+    }
+
     @keyframes bounce {
       0%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
       }
       50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
       }
     }
 
@@ -102,7 +97,6 @@ import Clown from './symbols/Clown.astro';
       position: absolute;
       color: white;
       fill: white !important; /* Asegura blanco incluso si hay estilos heredados */
-      font-size: 3rem;
       opacity: 0.8;
       animation: float 2s infinite alternate ease-in-out;
     }
@@ -117,10 +111,10 @@ import Clown from './symbols/Clown.astro';
       }
     }
 
-    .symbol:nth-child(1) { top: 10%; left: 15%; transform: rotate(-15deg); }
-    .symbol:nth-child(2) { top: 10%; left: 90%; }
-    .symbol:nth-child(3) { top: 50%; left: 15%; transform: rotate(30deg); }
-    .symbol:nth-child(4) { top: 70%; left: 92%; }
+    .symbol:nth-child(1) { top: 10%; left: 15%;  }
+    .symbol:nth-child(2) { top: 10%; left: 87%; }
+    .symbol:nth-child(3) { top: 50%; left: 15%;  }
+    .symbol:nth-child(4) { top: 70%; left: 90%; }
     .symbol:nth-child(5) { top: 80%; left: 30%; }
     .symbol:nth-child(6) { top: 18%; left: 69%; }
     .symbol:nth-child(7) { top: 25%; left: 3%; }
@@ -131,3 +125,4 @@ import Clown from './symbols/Clown.astro';
     .symbol:nth-child(12) { top: 24%; left: 25%; }
   </style>
 </section>
+

@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 import '@fontsource/bangers';
 import '@fontsource/staatliches';
+import 'flowbite';
 ---
 
 <!doctype html>
@@ -21,6 +22,7 @@ import '@fontsource/staatliches';
 	</head>
 	<body>
 		<slot />
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
 	</body>
 </html>
 <style is:global>

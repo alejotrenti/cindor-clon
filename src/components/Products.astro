@@ -8,11 +8,11 @@ import Star from "./symbols/Star.astro";
 ---
 
 <section id="products" class="relative pt-64 w-full bg-amber-950 text-center overflow-hidden">
-  <h2 class="text-6xl font-bold text-white py-10">NUESTROS <span class="text-red-800">PRODUCTOS</span></h2>
+  <h2 class="text-6xl font-bold text-white py-10 z-20">NUESTROS <span class="text-red-800 z-20">PRODUCTOS</span></h2>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center px-4 max-w-7xl mx-auto pt-20">
       <!-- Producto 1 -->
-      <div class="text-center  p-6  transform hover:scale-105 transition-all duration-300">
+      <div class="text-center  p-6  transform hover:scale-105 transition-all duration-300 z-20">
         <a href="https://link-del-producto1.com" target="_blank" rel="noopener noreferrer">
           <div class="w-72 h-72 mx-auto mb-6 rounded-lg overflow-hidden">
             <img src="producto1.webp" alt="producto1" class="w-full h-full object-contain">
@@ -23,7 +23,7 @@ import Star from "./symbols/Star.astro";
       </div>
     
       <!-- Producto 2 -->
-      <div class="text-center  p-6  transform hover:scale-105 transition-all duration-300">
+      <div class="text-center  p-6  transform hover:scale-105 transition-all duration-300 z-20">
         <a href="https://link-del-producto2.com" target="_blank" rel="noopener noreferrer">
           <div class="w-72 h-72 mx-auto mb-6 rounded-lg overflow-hidden">
             <img src="producto2.webp" alt="producto2" class="w-full h-full object-cover">
@@ -34,108 +34,134 @@ import Star from "./symbols/Star.astro";
       </div>
   </div>
 
-  <div class="pt-6">
-    <button class="bg-[#fbca1f] font-inherit py-3 px-6 font-extrabold text-2xl border-3 border-black rounded-[0.4em] shadow-[0.1em_0.1em] cursor-pointer transform transition-all hover:translate-x-[-0.05em] hover:translate-y-[-0.05em] hover:shadow-[0.15em_0.15em] active:translate-x-[0.05em] active:translate-y-[0.05em] active:shadow-[0.05em_0.05em]">
-      COMPRAME!
-    </button>
+  <div class="pt-6 lg:pt-12 text-center z-20 lg:pb-0 pb-10 ">  
+    <a href="/products">
+      <button class="bg-[#fbca1f] font-inherit py-3 px-6 font-extrabold text-2xl border-3 border-black rounded-[0.4em] shadow-[0.1em_0.1em] cursor-pointer transform transition-all hover:translate-x-[-0.05em] hover:translate-y-[-0.05em] hover:shadow-[0.15em_0.15em] active:translate-x-[0.05em] active:translate-y-[0.05em] active:shadow-[0.05em_0.05em]">
+        COMPRAME!
+      </button>
+    </a>
   </div>
 
   <div class="absolute inset-0 pointer-events-none z-10">
-    <span class="symbol"><Cruz /></span>
-    <span class="symbol"><Cruz /></span>
-    <span class="symbol"><AskSym /></span>
-    <span class="symbol"><AskSym /></span>
-    <span class="symbol"><Plus /></span>
-    <span class="symbol"><Plus /></span>
-    <span class="symbol"><Star /></span>
-    <span class="symbol"><Star /></span>
-    <span class="symbol"><Heart /></span>
-    <span class="symbol"><Heart /></span>
-    <span class="symbol"><Clown /></span>
-    <span class="symbol"><Clown /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Cruz /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Cruz /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><AskSym /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><AskSym /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Plus /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Plus /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Star /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Star /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Heart /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Heart /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Clown /></span>
+    <span class="symbol  w-[8vw] h-[8vw] sm:w-[6vw] sm:h-[6vw]"><Clown /></span>
   </div>
-
+  
   <style>
-    .symbol{
-      width: 20px;
-      height: 20px;
+    .symbol {
       position: absolute;
       color: white;
       fill: white !important; /* Asegura blanco incluso si hay estilos heredados */
-      font-size: 3rem;
+      font-size: 3vw; /* Tamaño relativo */
       opacity: 0.6;
     }
-    
+  
     .symbol:nth-child(1) {
       top: 9%;
       left: 10%;
       transform: rotate(-25deg);
     }
-
+  
     .symbol:nth-child(2) {
       top: 10%;
       left: 85%;
       transform: rotate(45deg);
     }
-
+  
     .symbol:nth-child(3) {
       top: 70%;
       left: 5%;
       transform: rotate(15deg);
     }
-
+  
     .symbol:nth-child(4) {
       top: 65%;
       left: 80%;
       transform: rotate(-10deg);
     }
-
+  
     .symbol:nth-child(5) {
       top: 68%;
       left: 22%;
       transform: rotate(60deg);
     }
-
+  
     .symbol:nth-child(6) {
-      top: 15%;
+      top: 13%;
       left: 60%;
       transform: rotate(-45deg);
     }
-
+  
     .symbol:nth-child(7) {
-      top: 20%;
+      top: 30%;
       left: 5%;
       transform: rotate(30deg);
     }
-
+  
     .symbol:nth-child(8) {
       top: 50%;
       left: 17%;
       transform: rotate(-90deg);
     }
-
+  
     .symbol:nth-child(9) {
       top: 45%;
       left: 80%;
       transform: rotate(120deg);
     }
-
+  
     .symbol:nth-child(10) {
       top: 65%;
-      left: 97%;
+      left: 92%;
       transform: rotate(-180deg);
     }
-
+  
     .symbol:nth-child(11) {
-      top: 78%;
-      left: 99%;
+      top: 38%;
+      left: 95%;
       transform: rotate(90deg);
     }
-
+  
     .symbol:nth-child(12) {
       top: 22%;
       left: 30%;
       transform: rotate(-60deg);
     }
+  
+    /* Media Queries para ajustar tamaño en pantallas más pequeñas */
+    @media (max-width: 1024px) {
+      .symbol {
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .symbol {
+        width: 8vw;
+        height: 8vw;
+        font-size: 5vw;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .symbol {
+        width: 10vw;
+        height: 10vw;
+        font-size: 6vw;
+      }
+    }
   </style>
+  
 </section>

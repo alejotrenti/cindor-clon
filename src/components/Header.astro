@@ -1,17 +1,72 @@
-<nav class="fixed top-0 w-full bg-red-500 bg-opacity-20 shadow-md px-56 py-8 flex justify-between items-center backdrop-blur-md z-50">
-    <img class="w-44" src="/CINDOR.png" alt="Logo">
-    <div class="flex gap-14 items-center relative">
-        <!-- PRODUCTOS con menú desplegable -->
+<nav class="relative lg:fixed top-0 w-full bg-red-500 lg:bg-opacity-20 shadow-md px-6 sm:px-12 py-4 flex justify-between items-center backdrop-blur-md z-50">
+    <!-- Logo -->
+    <img class="w-32 sm:w-44" src="/CINDOR.png" alt="Logo">
+
+    <!-- Dropdown para pantallas pequeñas -->
+    <div class="lg:hidden">
+        <button
+            id="mobile-menu-toggle"
+            class="text-white bg-red-700 hover:bg-red-600 border-0 px-4 py-2 rounded-md text-xl focus:outline-none focus:ring-2 focus:ring-red-300"
+        >
+            ☰
+        </button>
+        <ul
+            id="mobile-menu"
+            class="hidden flex-col gap-2 p-4 shadow bg-red-700 border-2 border-red-500 rounded-lg w-52 text-white absolute top-16 right-6"
+        >
+            <li><a href="#product" class="block hover:bg-red-600 px-4 py-2 rounded-md border-b border-b-red-200">PRODUCTOS</a></li>
+            <li><a href="#buy" class="block hover:bg-red-600 px-4 py-2 rounded-md border-b border-b-red-200">COMPRAR</a></li>
+            <li><a href="#ingredients" class="block hover:bg-red-600 px-4 py-2 rounded-md">INGREDIENTES</a></li>
+        </ul>
+    </div>
+
+    <!-- Menú en pantallas grandes -->
+    <div class="hidden lg:flex gap-14 items-center relative">
+        <!-- Enlace Productos con Big Menu -->
         <div class="relative group">
-            <a href="#product" class="text-white text-4xl font-semibold font-staat">PRODUCTOS</a>
-            <!-- Menú desplegable -->
-            <div class="absolute left-0 top-full w-screen mt-2 hidden group-hover:flex flex-col bg-red-600 bg-opacity-70 text-white text-xl shadow-lg rounded-lg p-4 space-y-2">
-                <a href="#product1" class="hover:text-yellow-300">Producto 1</a>
-                <a href="#product2" class="hover:text-yellow-300">Producto 2</a>
+            <!-- Enlace principal -->
+            <a href="#product" class="text-white text-xl sm:text-4xl font-semibold font-staat">
+                PRODUCTOS
+            </a>
+            <!-- Big Menu -->
+            <div
+                class="absolute right-0 top-full mt-2 hidden group-hover:flex hover:flex w-[900px] bg-red-700 text-white shadow-lg rounded-md p-6"
+              >
+                <!-- Producto 1 -->
+                <div class="flex flex-col items-center gap-4 p-4 w-1/2 border-r-4 border-red-400">
+                    <a href="">
+                        <img src="/producto1.webp" alt="CINDOR 200 ML" class="w-auto h-72 rounded-md">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold pt-3">CINDOR 200 ML</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Producto 2 -->
+                <div class="flex flex-col items-center gap-4 p-4 w-1/2">
+                    <a href="">
+                        <img src="/producto2.webp" alt="CINDOR 1 L" class="w-64 h-auto rounded-md">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold">CINDOR 1 L</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         
-        <a href="#buy" class="text-white text-4xl font-semibold font-staat">COMPRAR</a>
-        <a href="#ingredients" class="text-white text-4xl font-semibold font-staat">INGREDIENTES</a>
+        
+
+        <!-- Otros enlaces -->
+        <a href="#buy" class="text-white text-xl sm:text-4xl font-semibold font-staat">COMPRAR</a>
+        <a href="#ingredients" class="text-white text-xl sm:text-4xl font-semibold font-staat">INGREDIENTES</a>
     </div>
+
 </nav>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');  
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

@@ -27,19 +27,14 @@ const Box = () => {
 
 export default function Experience() {
   return (
-    <div style={{ width: "30vw", height: "50vh" }}>
-      {/* Canvas de React Three Fiber, configuramos la dimensión del canvas a pantalla completa */}
-      <Canvas camera={{ position: [0, 0, 4] }}> {/* La cámara está más cerca */}
-        {/* Iluminación para que el modelo se vea mejor */}
+    <div className="lg:w-[30vw] lg:h-[65vh]  w-[40vh] h-[50vh]">
+      <Canvas camera={{ position: [0, 0, 4] }}>
         <ambientLight intensity={1} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-        
-        {/* Añadimos los controles orbit para rotar, hacer zoom, etc. */}
         <OrbitControls />
-
-        {/* Colocamos el modelo 3D */}
         <Box />
       </Canvas>
     </div>
   );
 }
+
